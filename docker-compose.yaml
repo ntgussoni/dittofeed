@@ -89,7 +89,7 @@ services:
     build:
       context: .
       dockerfile: ./packages/admin-cli/Dockerfile
-    entrypoint: []
+    entrypoint: null
     profiles: ["apps", "admin-cli"]
     command: tail -f /dev/null
     tty: true
