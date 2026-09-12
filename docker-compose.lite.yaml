@@ -88,13 +88,7 @@ services:
     ports:
       - 7233:7233
     volumes:
-      # - ./packages/backend-lib/temporal-dynamicconfig:/etc/temporal/config/dynamicconfig
-      - type: bind
-      source: ./temporal-dynamicconfig/prod.yaml
-      target: /etc/temporal/config/dynamicconfig/prod.yaml
-      content: |
-        system.forceSearchAttributesCacheRefreshOnRead:
-          - value: true
+      - ./packages/backend-lib/temporal-dynamicconfig:/etc/temporal/config/dynamicconfig
   temporal-ui:
     profiles: ["temporal-ui"]
     container_name: temporal-ui
