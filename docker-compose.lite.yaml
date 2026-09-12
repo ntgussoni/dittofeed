@@ -41,8 +41,7 @@ services:
     # README: To add local env variables uncomment the following line and add a .env file in the root directory
     # env_file:
     #   - .env
-    networks:
-      - dittofeed-network-lite
+
   # useful for upgrading dittofeed
   admin-cli:
     image: dittofeed/dittofeed-admin-cli:${IMAGE_TAG:-v0.23.0}
@@ -61,8 +60,6 @@ services:
     # README: To add local env variables uncomment the following line and add a .env file in the root directory
     # env_file:
     #   - .env
-    networks:
-      - dittofeed-network-lite
   temporal:
     container_name: temporal
     restart: always
